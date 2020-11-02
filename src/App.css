@@ -1,1 +1,94 @@
 /* Other rules */
+.container {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 980px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding-top: 40px;
+}
+.container-box > div {
+  width: 300px;
+  height: 300px;
+  flex-shrink: 0;
+  margin-bottom: 40px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container-box > div:not(:nth-child(3n)) {
+  margin-right: 40px;
+}
+
+.footer {
+  background-color: #e5e5e5;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.red {
+  border: 10px solid #e30c12;
+}
+.pink {
+  border: 10px solid #f8c5af;
+}
+.green {
+  border: 10px solid #3ea535;
+}
+.blue {
+  border: 10px solid #2e9fe3;
+}
+.yellow {
+  border: 10px solid #ffee00;
+}
+.bold {
+  font-weight: bold;
+}
+h1 {
+  background-color: #333333;
+  font-size: 40px;
+  color: #fff;
+  line-height: 46px;
+  text-align: center;
+  font-weight: bold;
+  padding: 15px 0;
+}
+h2 {
+  font-size: 30px;
+  line-height: 35px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1270px) {
+  .container-box {
+    width: 640px;
+  }
+  .container-box > div {
+    margin-right: 40px;
+  }
+  .container-box > div:nth-child(even) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container-box {
+    width: 100%;
+    flex-direction: column;
+  }
+  .container-box > div,
+  .container-box > div:nth-child(even),
+  .container-box > div:not(:nth-child(3n)) {
+    margin: 0 auto 40px;
+  }
+}
